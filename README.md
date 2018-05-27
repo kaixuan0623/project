@@ -1,6 +1,6 @@
 # Image Filtering
 Description:
-In this project, I build a simple pipeline for manipulting bitmap image files by applying a set of common filters on the images, which will allow the user to do things like turn the image to greyscale, blur the image, and increase the image size.
+In this project, I build a simple pipeline for manipulating bitmap image files by applying a set of common filters on the images, which will allow the user to do things like turn the image to greyscale, blur the image, and increase the image size.
 
 Each image filter will be a separate program that reads in a bitmap image from its standard input, calculates some transformation on the image's pixels and possibly its dimensions, and then writes a transformed bitmap image to its standard output.
 
