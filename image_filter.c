@@ -15,10 +15,6 @@
 /*
  * Check whether the given command is a valid image filter, and if so,
  * run the process.
- *
- * We've given you this function to illustrate the expected command-line
- * arguments for image_filter. No further error-checking is required for
- * the child processes.
  */
 void run_command(const char *cmd) {
     if (strcmp(cmd, "copy") == 0 || strcmp(cmd, "./copy") == 0 ||

@@ -9,7 +9,7 @@
  *   1. Read in pixels one at a time (because copy is a pixel-by-pixel transformation).
  *   2. transform the pixel to grey scale.
  *
- * Note that this function should allocate space only for a single Pixel;
+ * This function only allocate space for a single Pixel;
  */
 void greyscale_filter(Bitmap *bmp) {
     // the arugment *bmp only has the header data.

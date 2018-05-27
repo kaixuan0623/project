@@ -8,8 +8,6 @@
  * This function is responsible for doing the following:
  *   1. Read in pixels one at a time.
  *   2. transform the pixel.
- *
- * Note that this function should allocate space only for a single Pixel;
  */
 void gaussian_blur_filter(Bitmap *bmp) {
     // Try to read ,store and manipulate the first three row first.

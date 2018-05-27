@@ -43,9 +43,6 @@ void run_filter(void (*filter)(Bitmap *), int scale_factor);
  * when applying the corresponding transformation (a gaussian blur or
  * an edge detection operation), using the pixel values in the 3-by-3 grid.
  *
- * You aren't responsible for the calculations themselves, only for calling
- * these functions properly on pointers representing the 3-by-3 grids.
- *
  * Note that these functions should be called *once per pixel in the image*;
  * the returned Pixel values can be immediately written to stdout.
  */

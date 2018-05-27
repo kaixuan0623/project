@@ -9,31 +9,6 @@
  * Read in bitmap header data from stdin, and return a pointer to
  * a new Bitmap struct containing the important metadata for the image file.
  *
- *
- * Notes:
- *   1. Store header data in an array of unsigned char (essentially
- *      an array of bytes). Examples:
- *      on the stack,
- *          unsigned char data[10];
- *      on the heap,
- *          unsigned char *data = malloc(10);
- *
- *   2. Don't make any assumptions about the header size. You should read in
- *      BMP_HEADER_SIZE_OFFSET bytes first, and then the header size,
- *      and then use this to allocate enough space for the actual header.
- *
- *   3. You can use memcpy to transfer bytes to and from the Bitmap "header" field.
- *      You can even write these bytes to memory allocated for variables of other types!
- *      For example:
- *          unsigned char bytes[4];
- *          int x = 10;
- *          int y;
- *          memcpy(bytes, &x, 4);  // Copy the int x into bytes.
- *          memcpy(&y, bytes, 4);  // Copy the contents of bytes into y.
- *
- *   4. You can use either fread/fwrite or read/write to perform I/O operations here.
- *
- *   5. Make good use of the provided macros in bitmap.h to index into the "header" array.
  */
 Bitmap *read_header() {
     // Move the offsets to 2 from the beginning.
@@ -155,8 +130,6 @@ void free_bitmap(Bitmap *bmp) {
  *   2. bmp->header *must* be updated, as this is what's written out
  *      in write_header.
  *
- *   3. You may choose whether or not to also update bmp->width and bmp->height.
- *      This choice may depend on how you implement the scale filter.
  */
 void scale(Bitmap *bmp, int scale_factor) {
     // for now, we already have the header_data.

@@ -8,9 +8,6 @@
  * This function is responsible for doing the following:
  *   1. Read in pixels one at a time (because copy is a pixel-by-pixel transformation).
  *   2. Immediately write out each pixel.
- *
- * Note that this function should allocate space only for a single Pixel;
- * do *not* store more than one Pixel at a time, it isn't necessary here!
  */
 void copy_filter(Bitmap *bmp) {
     // the arugment *bmp only has the header data.
